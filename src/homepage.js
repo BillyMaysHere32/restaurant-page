@@ -1,17 +1,9 @@
 export function initializeWebsite() {
     const content = document.getElementById("content");
+    content.replaceChildren();
 
-    const heading = document.createElement("div");
-    heading.classList.add("heading");
-    const restaurantName = document.createElement("h1");
-    heading.textContent = "Moonlight";
-    content.appendChild(heading);
-
-    const main = document.createElement("main");
-    main.classList.add("main");
-    main.textContent = "Welcome";
-    content.appendChild(main);
-
+    content.appendChild(createTitle("Welcome to"));
+    content.appendChild(createTitle("Moonlight"));
 
     const image = document.createElement("img");
     image.classList.add("image");
@@ -19,7 +11,19 @@ export function initializeWebsite() {
     image.alt = "Image of food";
     content.appendChild(image);
 
-
-  
-
+    content.appendChild(createParagraph("WHERE FINE DINING AND"));
+    content.appendChild(createParagraph("GREAT ATMOSPHERE"));
+    content.appendChild(createParagraph("CONVERGE."));
 }
+
+function createParagraph(text) {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    return paragraph;
+  }
+
+  function createTitle(text) {
+    const title = document.createElement("h2");
+    title.textContent = text;
+    return title;
+  }

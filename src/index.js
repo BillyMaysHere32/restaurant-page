@@ -7,12 +7,12 @@ initializeWebsite();
 let switchTabModule = (function() {
 
     const homeTab = document.querySelector('.home');
-    homeTab.addEventListener(click, initializeWebsite);
+    homeTab.addEventListener('click', initializeWebsite);
 
     const menuTab = document.querySelector('.menu');
-    menuTab.addEventListener(click, menu);
+    menuTab.addEventListener('click', menu);
 
     const contactTab = document.querySelector('.contact');
-    contactTab.addEventListener(click, contact);
+    contactTab.addEventListener('click', contact);
 
 })();
